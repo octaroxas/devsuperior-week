@@ -3,6 +3,7 @@ import NavBar from 'components/NavBar';
 import Footer from 'components/Footer';
 import DataTable from 'components/DataTable';
 import BarChart from 'components/BarChart';
+import DonutChart from 'components/DonutChart';
 
 function App() {
    return (
@@ -16,8 +17,8 @@ function App() {
                   <BarChart />
                </div>
                <div className="col-sm-6">
-               <h5>Taxa de Conversão em vendas</h5>
-                  <BarChart />
+               <h5 className="text-center text-secondary">Vendas (%)</h5>
+                  <DonutChart/>
                </div>
             </div>
 
