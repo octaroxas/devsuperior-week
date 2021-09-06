@@ -1,0 +1,2 @@
+[0906/151632.599:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[0906/151632.622:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\octao\AppData\Local\CryptoTab Browser\User Data\Crashpad\attachments\08693869-e827-473d-93a1-5d7e254d305b: O sistema não pode encontrar o caminho especificado. (0x3)
