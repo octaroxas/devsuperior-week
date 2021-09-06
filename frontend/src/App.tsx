@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from 'components/NavBar';
 import Footer from 'components/Footer';
+import DataTable from 'components/DataTable';
 
 function App() {
    return (
@@ -8,8 +9,9 @@ function App() {
          <NavBar />
          <div className="container">
             <h1 className="text-primary">Olá</h1>
+            <DataTable />
          </div>
-         <Footer/>
+         <Footer />
       </>
    );
 }
