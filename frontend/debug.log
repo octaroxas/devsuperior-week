@@ -1,2 +1,10 @@
 [0906/151632.599:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [0906/151632.622:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\octao\AppData\Local\CryptoTab Browser\User Data\Crashpad\attachments\08693869-e827-473d-93a1-5d7e254d305b: O sistema não pode encontrar o caminho especificado. (0x3)
+[0906/173405.299:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[0906/173406.948:ERROR:exception_snapshot_win.cc(99)] thread ID 1860 not found in process
+[0906/173406.948:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0906/213352.994:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[0906/213353.007:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\octao\AppData\Local\CryptoTab Browser\User Data\Crashpad\attachments\1e398175-8eca-4787-ad37-a2b051b59204: O sistema não pode encontrar o caminho especificado. (0x3)
+[0906/224138.592:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[0906/224138.592:ERROR:exception_snapshot_win.cc(99)] thread ID 16744 not found in process
+[0906/224138.592:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
