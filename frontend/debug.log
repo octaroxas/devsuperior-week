@@ -8,3 +8,4 @@
 [0906/224138.592:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
 [0906/224138.592:ERROR:exception_snapshot_win.cc(99)] thread ID 16744 not found in process
 [0906/224138.592:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentou-se acessar um processo de saída. (0xc000010a)
+[0911/145730.567:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)

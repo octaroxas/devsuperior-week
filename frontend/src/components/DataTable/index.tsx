@@ -1,6 +1,27 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { SalePage } from 'types/sale';
+import { formatLocalDate } from 'utils/format';
+import { BASE_URL } from 'utils/requests';
 
 function DataTable() {
+
+   const [page, setPage] = useState<SalePage>({
+      first: true,
+      last: true,
+      number: 0,
+      totalElements: 0,
+      totalPages: 0
+   });
+
+   useEffect(() => {
+      axios.get(`${BASE_URL}/sales?page=1&size=20&sort=date,desc`)
+         // then é executado quando a requisição é realizada com sucesso
+         .then(response => {
+            setPage(response.data); // é feita a atribuição direta pois page tem os mesmos atributos que a resposta do server (SalePage)
+         });
+   }, []);
+
    return (
       <div className="table-responsive">
          <table className="table table-striped table-sm">
@@ -10,45 +31,19 @@ function DataTable() {
                   <th>Vendedor</th>
                   <th>Clientes visitados</th>
                   <th>Negócios fechados</th>
-                  <th>Valor</th> 
+                  <th>Valor</th>
                </tr>
             </thead>
             <tbody>
-               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-               </tr>
-               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-               </tr>
-               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-               </tr>
-               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-               </tr>
-               <tr>
-                  <td>22/04/2021</td>
-                  <td>Barry Allen</td>
-                  <td>34</td>
-                  <td>25</td>
-                  <td>15017.00</td>
-               </tr>
+               {page.content?.map(item => ( // se o atributo content estiver definido faça iterações com o map
+                  <tr key={item.id}>
+                     <td>{formatLocalDate(item.date, "dd/MM/yyyy")}</td>
+                     <td>{item.seller.name}</td>
+                     <td>{item.visited}</td>
+                     <td>{item.deals}</td>
+                     <td>{item.amount.toFixed(2)}</td>
+                  </tr>
+               ))}
             </tbody>
          </table>
       </div>
